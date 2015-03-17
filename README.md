@@ -12,7 +12,8 @@ First of all: it is really hard as a coder to explain someone how to install scr
 `if(hasInterface) then {` <br />
 If not found, please copy the entire content of `code_for_init.sqf` into your own init.sqf where it would be appropriate and correct according to ArmA syntax. <br />
 If you did find it, please paste line **4 and 5** from `code_for_init.sqf` into the surrounding `{ };` of the `if(hasInterface)` check.
-3. Configure the contents of the menu Items by changing SC_compileMenu.sqf into your own likings.
+3. Add this to the BOTTOM of your **description.ext:** `#include "ScarCode\SC_Rsc.hpp"` 
+4. Configure the contents of the menu Items by changing SC_compileMenu.sqf into your own likings.
 
 ####Installation instructions TYPE2 <br />
 1. Please remove any files and code associated with the older version. It can be several different filenames depending on the version you have so I hope you know enough to determine which files or scripts to delete. <br />
