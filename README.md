@@ -18,3 +18,10 @@ If you did find it, please paste line **4 and 5** from `code_for_init.sqf` into 
 ####Installation instructions TYPE2 <br />
 1. Please remove any files and code associated with the older version. It can be several different filenames depending on the version you have so I hope you know enough to determine which files or scripts to delete. <br />
 2. Do the TYPE 1 instructions :)
+
+#### Serious request
+If you appreciate my work, please consider to donate me. There goes a lot of hours into making these scripts so it would be great if you are willing to thank me through any amount of money.
+There is a reason why I do not sell this script: I want very single server admin to be able to use this script.
+Please, take my script and enjoy :)
+
+Donate link: http://scarcode.com/donate/
