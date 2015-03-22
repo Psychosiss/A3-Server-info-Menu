@@ -20,7 +20,7 @@ If you did find it, please paste line **4 and 5** from `code_for_init.sqf` into 
 2. Do the TYPE 1 instructions :)
 
 #### Serious request
-If you appreciate my work, please consider to donate me. There goes a lot of hours into making these scripts so it would be great if you are willing to thank me through any amount of money.
+If you appreciate my work, please consider to donate to me. There goes a lot of hours into making these scripts so it would be great if you are willing to thank me through any amount of money.
 There is a reason why I do not sell this script: I want very single server admin to be able to use this script.
 Please, take my script and enjoy :)
 
