@@ -1,6 +1,5 @@
-// [ScarCode] Servermenu script by IT07
-if (hasInterface) then 
+// {ScarCode} Server info menu by IT07
+if (hasInterface) then
 {
-	[true] call compile preprocessFileLineNumbers "ScarCode\SC_compileMenu.sqf";
-	[true] ExecVM "ScarCode\SC_startMenu.sqf";
+	[] ExecVM "ScarCode\sMenuInit.sqf";
 };

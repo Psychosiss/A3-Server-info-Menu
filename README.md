@@ -1,27 +1,30 @@
-`Version: 02314_BETA`
+`Current Version: 03879_PATCH5`
 ###ArmA 3 Server info Menu by IT07
 
 First of all: it is really hard as a coder to explain someone how to install scripts. So please bare with me.<br />
 <br />
-**TYPE 1 instructions: for people that do NOT already have a previous version installed.** <br />
-**TYPE 2 instructions: for people that DO already have a previous version installed**
-<br /> <br />
-####Installation instructions TYPE 1 <br />
-1. Copy and paste the ScarCode folder into the root of your missionfile. <br />
-2. Open your own init.sqf and look for this piece of code: <br />
-`if(hasInterface) then {` <br />
-If not found, please copy the entire content of `code_for_init.sqf` into your own init.sqf where it would be appropriate and correct according to ArmA syntax. <br />
-If you did find it, please paste line **4 and 5** from `code_for_init.sqf` into the surrounding `{ };` of the `if(hasInterface)` check.
-3. Add this to the BOTTOM of your **description.ext:** `#include "ScarCode\SC_Rsc.hpp"` 
-4. Configure the contents of the menu Items by changing SC_compileMenu.sqf into your own likings.
+#### INSTALLATION
+Open code_for_init.sqf that is located inside this repository and copy over the code to your own init.sqf<br />
+If you own previous versions, please delete all of the files associated with it.<br />
+Also, add these two lines to your description.ext: <br />
+`#include "ScarCode\sMenuCommon.hpp" <br />
+#include "ScarCode\sMenuRsc.hpp"`
 
-####Installation instructions TYPE2 <br />
-1. Please remove any files and code associated with the older version. It can be several different filenames depending on the version you have so I hope you know enough to determine which files or scripts to delete. <br />
-2. Do the TYPE 1 instructions :)
-
+#### CONFIGURATION
+To configure the menu, please check sMenuRsc.hpp (inside the ScarCode folder) and read CAREFULLY!<br />
+NOTE: there are several images included with the menu that represent several server hosting companies.<br />
+Feel free to delete the images you do not need or add one yourself :)
+<br />
+#### BATTLEYE
+For people that use BE Filters, look in the file named BEcustom.txt and simply merge the contents of it with your own scripts.txt.<br />
+The custom BE code has only been tested on ArmA 3 Epoch 2.3.0.2!<br />
+<br />
 #### Serious request
-If you appreciate my work, please consider to donate to me. There goes a lot of hours into making these scripts so it would be great if you are willing to thank me through any amount of money.
-There is a reason why I do not sell this script: I want very single server admin to be able to use this script.
-Please, take my script and enjoy :)
+This menu could EASILY be payware without any doubt and could be sold for around $30 EACH.<br />
+But I did not put a pricetag on it just because I did not want to. <br />
+If you really appreciate my work, please consider a donation. Thank you!<br />
 
-Donate link: http://scarcode.com/donate/
+Donate link: http://scarcode.com/donate/ <br />
+
+#### SPECIAL THANKS
+Special thanks to whom who created me. He gave me the brains to do all of this :)
