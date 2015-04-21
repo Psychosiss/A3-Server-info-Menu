@@ -7,8 +7,8 @@ First of all: it is really hard as a coder to explain someone how to install scr
 Open code_for_init.sqf that is located inside this repository and copy over the code to your own init.sqf<br />
 If you own previous versions, please delete all of the files associated with it.<br />
 Also, add these two lines to your description.ext: <br />
-`#include "ScarCode\sMenuCommon.hpp" <br />
-#include "ScarCode\sMenuRsc.hpp"`
+`#include "ScarCode\sMenuCommon.hpp"`
+`#include "ScarCode\sMenuRsc.hpp"`
 
 #### CONFIGURATION
 To configure the menu, please check sMenuRsc.hpp (inside the ScarCode folder) and read CAREFULLY!<br />
