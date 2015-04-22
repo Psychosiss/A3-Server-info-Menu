@@ -1,3 +1,7 @@
+###CHANGELOG `BE Kick createDialog fix`
+[FIXED] BE Script restriction kicks for createDialog
+Affected files: BEcustom.txt
+
 ###CHANGELOG `BE filters update for 03879_PATCH5`
 [FIXED] Kick for displayAddEventHandler
 
