@@ -13,7 +13,7 @@ class SC_sMenuConfig
 		///////  General config for the menu  ///////////////////
 		///////  Please adjust these below to your needs  ///////
 		/////////////////////////////////////////////////////////
-		keyToOpenMenu = 0x43; // Change to false to disable. Works with useScrollAction.
+		keyToOpenMenu = 0x43; // Change to false to disable. Works with useScrollAction. DEFAULT: 0x43 = F9 key. https://community.bistudio.com/wiki/DIK_KeyCodes
 		useScrollAction = 1; // Change to false to disable. Can use any number to enable. Can be used in combo with keyToOpenMenu
 		menuCategories[] = {"General info","Rules","Donating","Scripts and Credits"}; // Try to keep amount as low as possible for optimal speed/load
 		serverIPandPort = "123.456.78:2302"; // Speaks for itself
