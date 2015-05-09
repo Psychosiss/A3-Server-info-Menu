@@ -94,7 +94,7 @@ class SC_sMenuConfig
 #define GUI_GRID_H	(0.04)
 #define GUI_GRID_WAbs	(1)
 #define GUI_GRID_HAbs	(1)
-#define THEMECOLOR { 0.82, 0.231, 0.231, 0.8 }
+#define THEMECOLOR { 0.341,0.529,0.482,1 }
 
 class SC_sMenu
 {
@@ -104,12 +104,13 @@ class SC_sMenu
 	class controls
 	{
 ////////////////////////////////////////////////////////
-// GUI EDITOR OUTPUT START (by IT07, v1.063, #Sahycu)
+// GUI EDITOR OUTPUT START (by IT07, v1.063, #Garyla)
 ////////////////////////////////////////////////////////
 
 class sMenuTitle: RscText
 {
 	colorBackground[] = THEMECOLOR;
+	shadow = 0;
 
 	idc = 1000;
 	text = "SERVER INFO MENU by IT07"; //--- ToDo: Localize;
@@ -121,7 +122,7 @@ class sMenuTitle: RscText
 };
 class sMenuContentSelector: RscCombo
 {
-	onLBSelChanged = "[297, 1100, _this] call SC_fnc_getContent";
+	onLBSelChanged = _this call SC_sMenu_getContent;
 
 	idc = 2100;
 	x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -133,6 +134,7 @@ class sMenuContentSelector: RscCombo
 class sMenuContentTitle: RscText
 {
 	colorBackground[] = THEMECOLOR;
+	shadow = 0;
 
 	idc = 1008;
 	x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -143,6 +145,8 @@ class sMenuContentTitle: RscText
 };
 class sMenuTitleHostedBy: RscText
 {
+	shadow = 0;
+
 	idc = 1004;
 	x = 35.5 * GUI_GRID_W + GUI_GRID_X;
 	y = 0 * GUI_GRID_H + GUI_GRID_Y;
@@ -175,6 +179,7 @@ class sMenuSquadLogo: RscPicture
 class sMenuTitleServerInfo: RscText
 {
 	colorBackground[] = THEMECOLOR;
+	shadow = 0;
 
 	idc = 1003;
 	text = "SERVER INFO"; //--- ToDo: Localize;
@@ -187,6 +192,7 @@ class sMenuTitleServerInfo: RscText
 class sMenuTitleServerStats: RscText
 {
 	colorBackground[] = THEMECOLOR;
+	shadow = 0;
 
 	idc = 1005;
 	text = "SERVER STATS"; //--- ToDo: Localize;
@@ -212,7 +218,7 @@ class sMenuTxtServerStats: RscText
 };
 class sMenuRefreshStats: RscButton
 {
-	action = ["STATS","Stats refreshed! (Manual)"] call SC_fnc_f5Reload;
+	action = ["serverStats"] call SC_sMenu_handleCtrlText;
 
 	idc = 1603;
 	text = "REFRESH (F5)"; //--- ToDo: Localize;
@@ -283,7 +289,7 @@ class sMenuBgCopy: IGUIBack
 };
 class sMenuCopyUID: RscButton
 {
-	action = [297, 1400, format["Name: %1 and UID: %2", name player, getPlayerUID player], 0] call SC_fnc_handleCtrlText;
+	action = ["copyPlayerInfo"] call SC_sMenu_handleCtrlText;
 
 	idc = 1601;
 	text = "COPY PLAYER NAME & UID"; //--- ToDo: Localize;
@@ -307,7 +313,7 @@ class sMenuClose: RscButton
 };
 class sMenuButtonCopyIPandPort: RscButton
 {
-	action = [["serverIPandPort"],[1400,"IP:PORT = "]] call SC_fnc_getCfgSetting;
+	action = ["copyIpPort"] call SC_sMenu_handleCtrlText;
 
 	idc = 1602;
 	text = "COPY IP:PORT"; //--- ToDo: Localize;

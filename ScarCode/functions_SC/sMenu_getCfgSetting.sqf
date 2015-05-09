@@ -23,15 +23,8 @@ _result = [];
 		default {_value = nil};
 	};
 	_result = _result + [_value];
-} forEach (_this select 0);
+} forEach _this;
 
-if(isNil "_result") exitWith { };
+if(isNil "_result") then { _result = "No result"; };
 
-if(count _this > 1) then
-{
-	if(typeName (_this select 1 select 0) == "SCALAR") then
-	{
-		[297, _this select 1 select 0, (_this select 1 select 1) + (_result select 0), 0] call SC_fnc_handleCtrlText;
-	};
-};
 _result

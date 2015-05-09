@@ -12,12 +12,13 @@
 */
 
 disableSerialization;
-_index = format["%1", (_this select 2 select 1) + 1]; // +1 to make the config easier to understand
+_display = 297;
+_index = format["%1", (_this select 1) + 1]; // +1 to make the config easier to understand
 _title = getText (missionConfigFile >> "SC_sMenuConfig" >> "configContent" >> _index >> "title");
-_titleControl = (findDisplay (_this select 0)) displayCtrl 1008; // Define the control of the contentTitleBar
+_titleControl = (findDisplay _display) displayCtrl 1008; // Define the control of the contentTitleBar
 _titleControl ctrlSetText _title;
 
-_contentControl = (findDisplay (_this select 0)) displayCtrl (_this select 1);
+_contentControl = (findDisplay _display) displayCtrl 1100;
 _contentElements = getArray (missionConfigFile >> "SC_sMenuConfig" >> "configContent" >> _index >> "contentArray");
 _sMenuContent = ""; // Security and prevent loading different content
 {

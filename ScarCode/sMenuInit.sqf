@@ -4,14 +4,12 @@
 ///////  SUPPORT: it07@scarcode.com  //////////////////
 ///////////////////////////////////////////////////////
 
-SC_fnc_ctrLbAdd = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_fnc_ctrLbAdd.sqf";
-SC_fnc_getContent = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_fnc_getContent.sqf";
-SC_fnc_handleCtrlText = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_fnc_handleCtrlText.sqf";
-SC_fnc_getCfgSetting = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_fnc_getCfgSetting.sqf";
-SC_fnc_f5Reload = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_fnc_f5Reload.sqf";
-SC_fnc_sMenuOpen = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_fnc_sMenuOpen.sqf";
+SC_sMenu_getContent = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_getContent.sqf";
+SC_sMenu_handleCtrlText = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_handleCtrlText.sqf";
+SC_sMenu_getCfgSetting = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_getCfgSetting.sqf";
+SC_sMenu_Open = compileFinal preprocessFileLineNumbers "ScarCode\functions_SC\sMenu_Open.sqf";
 
-_settings = [["keyToOpenMenu","menuCategories","serverIPandPort","serverLocation","maxPlayers","restartInterval","serverMods","serverAllowedMods","serverMap","serverAH","serverManagedBy","serverHostLogo","serverSquadLogo","serverMission","serverGameType","useScrollAction"]] call SC_fnc_getCfgSetting;
+_config = ["useScrollAction","keyToOpenMenu"] call SC_sMenu_getCfgSetting;
 
 _evHandlerCheck = uiNamespace getVariable "SC_sMenuEH";
 	if not (isNil "_evHandlerCheck") then
@@ -29,13 +27,29 @@ _f5EventHandler = uiNamespace getVariable "SC_sMenuF5";
 
 waitUntil { sleep 0.1; isNull(findDisplay 46); (isNil "_evHandlerCheck"); (speed player > 0.1) };
 
-if (typeName (_settings select 0) == "SCALAR") then
+_sMenuAddAction = ""; // A little scope workaround
+if (typeName (_config select 0) == "SCALAR") then
 {
-	_sMenuEH = (findDisplay 46) displayAddEventHandler ["KeyDown", "if(_this select 1 == "+str (_settings select 0)+" and !dialog) then { "+str _settings+" call SC_fnc_sMenuOpen };false;"];
+	_sMenuAddAction = player addaction["<t color='#57877b'>{SC}</t> Server Info Menu", { call SC_sMenu_Open }, "", -1, false, true, "", ""];
+	_sMenuRemoveAction = player addAction["  - Remove option", { player removeAction (_this select 2); player removeAction (_this select 3)}, _sMenuAddAction, -1, false, true, "", ""];
+};
+
+if (typeName (_config select 1) == "SCALAR") then
+{
+	_sMenuEH = (findDisplay 46) displayAddEventHandler ["KeyDown", "if(_this select 1 == "+str (_config select 1)+" and !dialog) then { call SC_sMenu_Open };false;"];
 	uiNamespace setVariable ["SC_sMenuEH", _sMenuEH];
 };
 
-if (typeName (_settings select 15) == "SCALAR") then
+// A little extra security
+_ah = [] spawn
 {
-	_sMenuAddAction = player addaction["<t color='#D13B3B'>{SC}</t> Server Info Menu", { _this select 3 call SC_fnc_sMenuOpen }, _settings,-1,false,true,"", ""];
+	waitUntil { sleep 0.1; !isNull(findDisplay 297) };
+	while { true } do
+	{
+		if !(isNull(findDisplay 297)) then
+		{
+			if !(count allControls findDisplay 297 == 21) exitWith { closeDialog 297 };
+		};
+		sleep 0.1;
+	};
 };
