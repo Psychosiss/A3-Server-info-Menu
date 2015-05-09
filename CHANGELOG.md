@@ -1,3 +1,8 @@
+###CHANGELOG `03880_PATCH6`
+[IMPROVED] Overall security (serious!)
+[REMOVED] Not needed functions
+[ADDED] Option to remove scroll action
+
 ###CHANGELOG `BE Kick createDialog fix`
 [FIXED] BE Script restriction kicks for createDialog
 Affected files: BEcustom.txt
