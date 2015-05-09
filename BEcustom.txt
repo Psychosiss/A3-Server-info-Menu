@@ -1,4 +1,4 @@
 7 exec !="ScarCode\sMenuInit.sqf"
-7 displayAddEventHandler !="_sMenuF5 = (findDisplay 297) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == 0x3F) then { ['STATS'] call SC_fnc_f5Reload };false;\"];" !="_sMenuEH = (findDisplay 46) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == \"+str (_settings select 0)+\" and !dialog) then { \"+str _settings+\" call SC_fnc_sMenuOpen };false;\"];"
+7 displayAddEventHandler !="_sMenuF5 = (findDisplay 297) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == 0x3F) then { ['STATS'] call SC_fnc_f5Reload };false;\"];" !="_sMenuEH = (findDisplay 46) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == \"+str (_config select 1)+\" and !dialog) then { call SC_sMenu_Open };false;\"];"];"
 7 infiSTAR !="<a href='http://infistar.de'>infiSTAR</a>"
 7 createDialog !="createDialog \"SC_sMenu\";"

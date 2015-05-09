@@ -1,11 +1,11 @@
-`Current Version: 03879_PATCH5`
+`Current Version: 03880_PATCH6`
 ###ArmA 3 Server info Menu by IT07
 
 First of all: it is really hard as a coder to explain someone how to install scripts. So please bare with me.<br />
 <br />
 #### INSTALLATION
 Open code_for_init.sqf that is located inside this repository and copy over the code to your own init.sqf<br />
-If you own previous versions, please delete all of the files associated with it.<br />
+If you own previous versions, please delete all of the files associated with it or merge.<br />
 Also, add these two lines to your description.ext: <br />
 `#include "ScarCode\sMenuCommon.hpp"`
 `#include "ScarCode\sMenuRsc.hpp"`
