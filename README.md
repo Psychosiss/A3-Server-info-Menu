@@ -1,4 +1,4 @@
-`Current Version: 03880_PATCH6`
+`Current Version: 03880_PATCH7`
 ###ArmA 3 Server info Menu by IT07
 
 First of all: it is really hard as a coder to explain someone how to install scripts. So please bare with me.<br />
@@ -7,8 +7,8 @@ First of all: it is really hard as a coder to explain someone how to install scr
 Open code_for_init.sqf that is located inside this repository and copy over the code to your own init.sqf<br />
 If you own previous versions, please delete all of the files associated with it or merge.<br />
 Also, add these two lines to your description.ext: <br />
-`#include "ScarCode\sMenuCommon.hpp"`
-`#include "ScarCode\sMenuRsc.hpp"`
+`#include "ScarCode\sMenuCommon.hpp"` <br />
+`#include "ScarCode\sMenuRsc.hpp"` <br />
 
 #### CONFIGURATION
 To configure the menu, please check sMenuRsc.hpp (inside the ScarCode folder) and read CAREFULLY!<br />
@@ -27,4 +27,4 @@ If you really appreciate my work, please consider a donation. Thank you!<br />
 Donate link: http://scarcode.com/donate/ <br />
 
 #### SPECIAL THANKS
-Special thanks to whom who created me. He gave me the brains to do all of this :)
+Special thanks to Whom Who created me. He gave me the brains to do all of this :)

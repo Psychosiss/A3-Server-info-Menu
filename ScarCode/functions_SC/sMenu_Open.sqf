@@ -41,7 +41,7 @@ if (!dialog and isNull(findDisplay 297)) then
 
 	if (isNil "_f5EventHandler") then
 	{
-		_sMenuF5 = (findDisplay 297) displayAddEventHandler ["KeyDown", "if(_this select 1 == 0x3F) then { ['serverStats'] call SC_fnc_handleCtrlText; };false;"];
+		_sMenuF5 = (findDisplay 297) displayAddEventHandler ["KeyDown", "if(_this select 1 == 0x3F) then { ['serverStats'] call SC_sMenu_handleCtrlText; };false;"];
 		uiNamespace setVariable ["SC_sMenuF5", _sMenuF5];
 	};
 };

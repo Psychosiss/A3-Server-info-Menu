@@ -1,3 +1,11 @@
+###CHANGELOG `03880_PATCH7`
+[FIXED] Typo in the code for refreshing with F5 <br />
+[FIXED] Missing/incorrect displayAddEventHandler exception for scripts.txt <br />
+Affected files: <br />
+- ScarCode\sMenuInit.sqf
+- ScarCode\functions_SC\sMenu_Open.sqf
+- scripts.txt (formerly BEcustom.txt)
+
 ###CHANGELOG `03880_PATCH6`
 [IMPROVED] Overall security (serious!) <br />
 [REMOVED] Not needed functions <br />
