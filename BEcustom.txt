@@ -1,6 +1,7 @@
 7 exec !="ScarCode\sMenuInit.sqf"
-7 displayAddEventHandler !="_sMenuF5 = (findDisplay 297) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == 0x3F) then { ['serverStats'] call SC_sMenu_handleCtrlText; };false;\"];" !="_sMenuEH = (findDisplay 46) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == \"+str (_config select 1)+\" and !dialog) then { call SC_sMenu_Open };false;\"];"];"
-7 createDialog !="createDialog \"SC_sMenu\";"
+7 displayAddEventHandler !="_sMenuEH = (findDisplay 46) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == \"+str (_config select 1)+\" and !dialog) then { createDialog'SC_sMenu' };false;\"];"
+7 createDialog !="createDialog 'SC_sMenu'"
+7 displayRemoveEventHandler !="(findDisplay 46) displayRemoveEventHandler [\"KeyDown\", _evHandlerCheck];"
 
 ONLY ADD THE LINE BELOW IF YOU ALREADY HAVE 7 infiSTAR IN YOUR SCRIPTS.TXT
 7 infiSTAR !="<a href='http://infistar.de'>infiSTAR</a>"

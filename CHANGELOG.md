@@ -1,3 +1,13 @@
+###CHANGELOG `03881_PATCH8`
+[NEW] Redesigned menu layout
+[NEW] It is now possible to change the colors of the menu title bars and the text color of them
+[NEW] Online players and server uptime will be shown LIVE whilst the menu is open
+[FIXED] Too much calls to one function. Are now merged.
+[REMOVED] The refresh button and F5 shortcut
+[REMOVED] Sidebar with info
+[CHANGED] Becustom.txt
+[CHANGED] Location/name of hpp file(s). <br /> <br />
+
 ###CHANGELOG `03880_PATCH7`
 [FIXED] Typo in the code for refreshing with F5 <br />
 [FIXED] Missing/incorrect displayAddEventHandler exception for scripts.txt <br />
