@@ -17,7 +17,7 @@ Feel free to delete the images you do not need or add one yourself :)
 <br />
 #### BATTLEYE
 For people that use BE Filters, look in the file named BEcustom.txt and simply merge the contents of it with your own scripts.txt.<br />
-The custom BE code has only been tested on ArmA 3 Epoch 2.3.0.3!<br />
+The custom BE code has only been tested on ArmA 3 Epoch 0.3.0.3!<br />
 <br />
 #### Serious request
 If you really appreciate my work, please consider a donation. Thank you!<br />
