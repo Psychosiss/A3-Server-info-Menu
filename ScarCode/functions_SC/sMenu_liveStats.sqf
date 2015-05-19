@@ -7,7 +7,7 @@ switch(_this select 0) do
 {
 	case "UPT":
 	{
-		_mode = time; // Use serverTime for live use
+		_mode = serverTime; // Use serverTime for live use
 		_hours = _mode / 3600;
 		_minutes = (_hours - floor _hours);
 		_return = format["%1h %2m", floor(_hours), floor(_minutes * 60)];
