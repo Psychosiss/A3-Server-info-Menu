@@ -1,4 +1,4 @@
-`Current Version: 03881_PATCH8`
+`Current Version: 03881_PATCH9`
 ###ArmA 3 Server info Menu by IT07
 
 First of all: it is really hard as a coder to explain someone how to install scripts. So please bare with me.<br />
