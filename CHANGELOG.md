@@ -1,3 +1,6 @@
+###CHANGELOG `03881_PATCH9`
+[FIXED] Testing left-overs in ScarCode\functions_SC\sMenu_liveStats.sqf
+
 ###CHANGELOG `03881_PATCH8`
 [NEW] Redesigned menu layout
 [NEW] It is now possible to change the colors of the menu title bars and the text color of them
